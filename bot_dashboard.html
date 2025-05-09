@@ -1,0 +1,111 @@
+```html
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dashboard {
+      background-color: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .status {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      background-color: #f87171;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+
+    .owner {
+      font-size: 1em;
+      color: #666;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #059669;
+    } 
+footer {
+      margin-top: 40px;
+      font-size: 0.85em;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <h1>Bot Dashboard</h1>
+    <div class="info">
+      <div class="owner">Owner: 94701619816</div>
+      <div class="status" id="status">🔴 Offline</div>
+    </div>
+    <button onclick="toggleStatus()">Toggle Status</button>
+  </div>
+
+  <footer>© 2025 Bot Dashboard</footer>
+
+  <script>
+    function toggleStatus() {
+      const status = document.getElementById("status");
+      if (status.textContent === "🔴 Offline") {
+        status.textContent = "🟢 Online";
+        status.style.backgroundColor = "#10b981";
+      } else {
+        status.textContent = "🔴 Offline";
+        status.style.backgroundColor = "#f87171";
+      }
+    }
+  </script>
+
+</body>
+</html>
+```
+*File Explanation*:
+1. *HTML*: 
+   - This page shows a *Bot Dashboard*.
+   - It includes a *status* section that starts as *Offline*.
+   - The *owner's number* (94701619816) is displayed on the dashboard.
+
+2. *CSS*: 
+   - The page is styled with a clean, modern design using *rounded corners*, *box shadow*, and responsive typography.
+   - The *status* is styled with a red background initially and switches to a green background when the bot is toggled *Online*.
+
+3. *JavaScript*:
